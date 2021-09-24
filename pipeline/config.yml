@@ -1,0 +1,19 @@
+---
+general:
+  cpiApiServiceKeyCredentialsId: "apicpi"
+  integrationFlowId: "ModelingBasics_Base64Decoder"
+stages:
+  uploadStage:
+    enabled: true
+  deployStage:
+    enabled: true
+  integrationTestStage:
+    enabled: true
+steps:
+  integrationArtifactUpload:
+    packageId: "TST"
+    integrationFlowName: "ModelingBasics_Base64Decoder"
+  integrationArtifactTriggerIntegrationTest:
+    contentType: "application/xml"
+    messageBodyPath: "integrationsTest/messageBody"
+    iFlowServiceKeyCredentialsId: "integration-flow"
